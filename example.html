@@ -1,0 +1,131 @@
+<html>
+<head>
+	<title>eS-slideshow v1.0 Example - By Steven Crocker</title>
+	<meta charset="ISO-8859-1">
+    <style>
+		body {
+			font-family: sans-serif;
+			font-size: 13px;
+			line-height: 20px;
+		}
+		ul span {
+			color: #80A0C0;
+		}
+		div {
+			max-width: 800px;
+			margin: 0px auto;
+		}
+		.slideshow {
+			position: relative;
+			max-width: 800px;
+			margin: 20px auto;
+		}
+		.slideshow:hover {
+			-webkit-box-shadow: 0 0 30px 0px rgba(0,0,0,0.5);
+			box-shadow: 0 0 30px 0px rgba(0,0,0,0.5);
+		}
+		@media screen and (max-width: 600px) {
+			.slideshow .eS-pager span {
+				margin: 20px 2px;
+				width: 8px;
+				height: 8px;
+				-webkit-border-radius: 4px;
+				border-radius: 4px;
+			}
+		}
+    </style>
+	<link rel="stylesheet" href="css/eS-slideshow.v1.0.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="js/eS-slideshow.v1.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+			$('.slideshow').eSslideshow({
+				pager: true,
+				rounding: 400
+			});
+		});
+	</script>
+</head>
+<body>
+<div align="center">
+	<h1>eS-slideshow v1.0</h1>
+	<h3>by Steven Crocker</h3>
+</div>
+<div class="slideshow">
+	<img src="http://lorempixel.com/800/600/city">
+	<img src="http://lorempixel.com/800/600/abstract">
+	<img src="http://lorempixel.com/800/600/people">
+	<img src="http://lorempixel.com/800/600/transport">
+	<img src="http://lorempixel.com/800/600/animals">
+	<img src="http://lorempixel.com/800/600/food">
+	<img src="http://lorempixel.com/800/600/nature">
+	<img src="http://lorempixel.com/800/600/business">
+	<img src="http://lorempixel.com/800/600/nightlife">
+	<img src="http://lorempixel.com/800/600/sports">
+	<img src="http://lorempixel.com/800/600/cats">
+	<img src="http://lorempixel.com/800/600/fashion">
+	<img src="http://lorempixel.com/800/600/technics">
+</div>
+<div>
+	<h3>Features</h3>
+	<ul>
+		<li><strong>Responsive:</strong> This is default by design.  All slides must have equal width / height.  This plugin is not for variable height photos</li>
+		<li><strong>Lightweight:</strong> Only 3KB (compressed)</li>
+		<li><strong>Navigation:</strong> Options for previous and next buttons, pager, as well as keyboard navigation.</li>
+		<li><strong>Easy to use:</strong> Just include the js/css and called .eSslideshow() any div containing slides</li>
+		<li><strong>Flexible:</strong> Use images for slides, or use div content (must be equal wid/height). Slideshow adds .eS-active class to active slides so that you can customize CSS3 animations if wanted.</li>
+	</ul>
+	<h3>Options</h3>
+	<ul>
+		<li>
+			<strong>speed:</strong> Speed of transition
+			<span>- <strong>Default:</strong> 1000</span>
+		</li>
+		<li>
+			<strong>interval:</strong> Time between transitions
+			<span>- <strong>Default:</strong> 5000</span>
+		</li>
+		<li>
+			<strong>delay:</strong> Time before slidshow starts
+			<span>- <strong>Default:</strong> 0</span>
+		</li>
+		<li>
+			<strong>pauseonhover:</strong> Pause the slideshow when mouse over
+			<span>- <strong>Default:</strong> true</span>
+		</li>
+		<li>
+			<strong>manual:</strong> Manual control uses only navigation or keyboard (if enabled)
+			<span>- <strong>Default:</strong> false</span>
+		</li>
+		<li>
+			<strong>navigation:</strong> Enable the left and right arrows on hover
+			<span>- <strong>Default:</strong> true</span>
+		</li>
+		<li>
+			<strong>navfactor:</strong> The arrow size is calcuated using this factor, so that it stays proportionate to the size of the slideshow
+			<span>- <strong>Default:</strong> 15</span>
+		</li>
+		<li>
+			<strong>prev:</strong> Change the previous arrow symbol (text/unicode, use '&nbsp;' and class .eS-prev for graphical arrow)
+			<span>- <strong>Default:</strong> '&#9668;'</span>
+		</li>
+		<li>
+			<strong>next:</strong> Change the next arrow symbol (text/unicode, use '&nbsp;' and class .eS-next for graphical arrow)
+			<span>- <strong>Default:</strong> '&#9658;'</span>
+		</li>
+		<li>
+			<strong>rounding:</strong> Adds rounded corners to slideshow, can use any number or percent
+			<span>- <strong>Default:</strong> 20</span>
+		</li>
+		<li>
+			<strong>pager:</strong> Display the pager (style pager using class .eS-pager, .eS-pager > span, and .eS-pager > span.eS-active)
+			<span>- <strong>Default:</strong> false</span>
+		</li>
+		<li>
+			<strong>keyboard:</strong> Allow keyboard navigation on focus)? (left and right arrow, must click to focus does not focus on hover)
+			<span>- <strong>Default:</strong> true</span>
+		</li>
+	</ul>
+</div>
+</body>
+</html>
